@@ -8,9 +8,18 @@ Kleine Menüleisten-App für macOS ab Version 13. Sie behebt ein paar Eigenheite
 - **Minimieren ohne Genie-Effekt:** Fenster werden schlicht verkleinert statt mit der Genie-Animation.
 - **Bei Anmeldung starten:** Die App startet automatisch mit dem Mac.
 
+<img src="docs/menu.png" alt="Menü von ScrollShift" width="307">
+
 Die App hat kein Fenster und kein Dock-Symbol. Im Leerlauf braucht sie keine CPU. Sie speichert nur ihre Schalter und sendet nichts ins Netz.
 
-## Starten
+## Installieren
+
+### Variante A: fertige App (ZIP)
+
+1. `ScrollShift-x.y.z.zip` unter [Releases](https://github.com/MateoSkmn/ScrollShift/releases) herunterladen, entpacken und `ScrollShift.app` in den Ordner *Programme* ziehen.
+2. Doppelklicken. Die App ist nicht von Apple notarisiert, deshalb blockiert macOS den ersten Start. Dann *Systemeinstellungen → Datenschutz & Sicherheit* öffnen, unten bei ScrollShift auf **Trotzdem öffnen** klicken und bestätigen.
+
+### Variante B: selbst bauen
 
 Voraussetzung sind die Xcode Command Line Tools (`xcode-select --install`).
 
@@ -22,11 +31,13 @@ cp -R build/ScrollShift.app /Applications/
 open /Applications/ScrollShift.app
 ```
 
-Danach erscheint ein Maus-Symbol in der Menüleiste.
+### Nach dem Start
+
+Ein Maus-Symbol erscheint in der Menüleiste.
 
 **Berechtigung erteilen:** Beim ersten Start fragt macOS nach der Berechtigung für *Bedienungshilfen*. Unter *Systemeinstellungen → Datenschutz & Sicherheit → Bedienungshilfen* ScrollShift einschalten. Ohne sie funktionieren Mausrad- und Caps-Lock-Funktion nicht. Fehlt sie, zeigt das Menü einen Punkt, der direkt dorthin führt.
 
-> Die App ist nur ad-hoc signiert. Nach jedem Neubau den alten Eintrag unter *Bedienungshilfen* entfernen und die Berechtigung neu erteilen.
+> Die App ist nur ad-hoc signiert. Nach jedem Neubau oder Update den alten Eintrag unter *Bedienungshilfen* entfernen und die Berechtigung neu erteilen.
 
 ## Lizenz
 
